@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #1e3a34;
+  --gold-color: #c5a059;
+  --accent-color: #a88746;
+  --light-bg: #fdfbf7;
+}
+
+/* تحسين الهيرو ووضوح النص */
+.hero-landing {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("omar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  color: var(--gold-color);
+  margin-bottom: 15px;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.hero-content p {
+  color: #ffffff;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  max-width: 800px;
+  line-height: 1.6;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* تحسين الكروت وتأثيرات الهوفر */
+.nav-card {
+  border: none;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.nav-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background-color: var(--primary-color);
+  box-shadow: 0 15px 35px rgba(30, 58, 52, 0.3);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--gold-color);
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.nav-card:hover .card-icon {
+  transform: rotateY(360deg);
+  color: #fff !important;
+}
+.nav-card:hover p,
+.nav-card:active p {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+.nav-card:hover h3,
+.nav-card:active h3 {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+.nav-card p:active {
+  color: var(--gold-color) !important;
+  font-weight: bold;
+}
+
+/* الأزرار */
+.btn-gold {
+  background: linear-gradient(45deg, var(--gold-color), var(--accent-color));
+  color: white !important;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px) shadow(0 8px 20px rgba(197, 160, 89, 0.5));
+  filter: brightness(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-landing {
+    background-size: 100% 100%; /* تصغير الصورة لتناسب الشاشة */
+    background-attachment: scroll;
+    height: 70vh;
+  }
+
+  .hero-content h1 {
+    transform: scale(0.9);
+  }
+}
